@@ -61,12 +61,28 @@ body {
   align-items: center;
 }
 
+.nav__brand {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  min-width: 0;
+}
+
 .nav__logo {
   font-weight: 700;
   font-size: 16px;
   color: var(--color-text);
   text-decoration: none;
   letter-spacing: 0.5px;
+  flex-shrink: 0;
+}
+
+.nav__email {
+  font-size: 13px;
+  color: var(--color-text-subtle);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .nav__menu {
@@ -319,7 +335,7 @@ body {
 
 .documents {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 20px;
 }
 
@@ -454,5 +470,19 @@ body {
 
   .project__title {
     font-size: 19px;
+  }
+
+  .documents {
+    grid-template-columns: 1fr;
+  }
+
+  .nav__brand {
+    flex-direction: column;
+    gap: 2px;
+    align-items: flex-start;
+  }
+
+  .nav__email {
+    font-size: 11px;
   }
 }
