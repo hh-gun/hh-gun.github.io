@@ -64,7 +64,7 @@ body {
 .nav__brand {
   display: flex;
   align-items: baseline;
-  gap: 12px;
+  gap: 10px;
   min-width: 0;
 }
 
@@ -77,9 +77,15 @@ body {
   flex-shrink: 0;
 }
 
-.nav__email {
-  font-size: 13px;
+.nav__separator {
   color: var(--color-text-subtle);
+  font-size: 14px;
+  user-select: none;
+}
+
+.nav__email {
+  font-size: 14px;
+  color: var(--color-text-muted);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -482,7 +488,11 @@ body {
     align-items: flex-start;
   }
 
+  .nav__separator {
+    display: none;
+  }
+
   .nav__email {
-    font-size: 11px;
+    font-size: 12px;
   }
 }
