@@ -143,6 +143,17 @@ body {
   color: var(--color-bg);
 }
 
+.hero__link--primary {
+  background: var(--color-text);
+  color: var(--color-bg);
+}
+
+.hero__link--primary:hover {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+  color: var(--color-bg);
+}
+
 /* ========== Sections ========== */
 
 .section {
@@ -302,6 +313,77 @@ body {
 
 .project__link:hover {
   color: var(--color-accent);
+}
+
+/* ========== Documents ========== */
+
+.documents {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+.document {
+  border: 1px solid var(--color-border-light);
+  border-radius: 12px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+  transition: border-color 0.15s ease, transform 0.15s ease;
+}
+
+.document:hover {
+  border-color: var(--color-text);
+  transform: translateY(-2px);
+}
+
+.document__title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.document__desc {
+  font-size: 14px;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+.document__actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.document__btn {
+  flex: 1;
+  min-width: 0;
+  text-align: center;
+  padding: 9px 14px;
+  border: 1px solid var(--color-text);
+  border-radius: 6px;
+  color: var(--color-text);
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.document__btn:hover {
+  background: var(--color-text);
+  color: var(--color-bg);
+}
+
+.document__btn--primary {
+  background: var(--color-text);
+  color: var(--color-bg);
+}
+
+.document__btn--primary:hover {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
 }
 
 /* ========== Contact / Footer ========== */
