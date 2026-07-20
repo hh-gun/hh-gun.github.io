@@ -75,6 +75,7 @@ body {
   text-decoration: none;
   letter-spacing: 0.5px;
   flex-shrink: 0;
+  white-space: nowrap;
 }
 
 .nav__separator {
@@ -435,12 +436,31 @@ body {
 /* ========== Responsive ========== */
 
 @media (max-width: 720px) {
+  .nav {
+    padding: 12px 0;
+  }
+
+  .nav__inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
   .nav__menu {
-    gap: 18px;
+    gap: 16px;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .nav__menu::-webkit-scrollbar {
+    display: none;
   }
 
   .nav__link {
     font-size: 13px;
+    white-space: nowrap;
   }
 
   .hero {
@@ -482,17 +502,7 @@ body {
     grid-template-columns: 1fr;
   }
 
-  .nav__brand {
-    flex-direction: column;
-    gap: 2px;
-    align-items: flex-start;
-  }
-
-  .nav__separator {
-    display: none;
-  }
-
   .nav__email {
-    font-size: 12px;
+    font-size: 13px;
   }
 }
